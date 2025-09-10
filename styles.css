@@ -108,7 +108,9 @@ main {
 
 .password-section,
 .result-section,
-.not-encrypted-section {
+.not-encrypted-section,
+.file-list-section,
+.batch-result-section {
     background: white;
     border-radius: 16px;
     padding: 2rem;
@@ -118,7 +120,9 @@ main {
 
 .password-section h3,
 .result-section h3,
-.not-encrypted-section h3 {
+.not-encrypted-section h3,
+.file-list-section h3,
+.batch-result-section h3 {
     margin-bottom: 1.5rem;
     color: #333;
 }
@@ -271,4 +275,107 @@ footer {
         margin-right: 0;
         margin-bottom: 1rem;
     }
+}
+
+/* File list styles */
+.file-list {
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #e1e5e9;
+}
+
+.file-item.encrypted {
+    border-left-color: #ffa500;
+}
+
+.file-item.not-encrypted {
+    border-left-color: #48bb78;
+}
+
+.file-item.processed {
+    border-left-color: #48bb78;
+    background: #f0fff4;
+}
+
+.file-item.error {
+    border-left-color: #e53e3e;
+    background: #fef5f5;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.file-status {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.file-actions {
+    margin-top: 1.5rem;
+}
+
+.batch-actions {
+    margin-top: 1.5rem;
+}
+
+.processed-files {
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.processed-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #f0fff4;
+    border-radius: 8px;
+    border-left: 4px solid #48bb78;
+}
+
+.processed-file-info {
+    flex: 1;
+}
+
+.processed-file-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.processed-file-size {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.download-individual-btn {
+    background: #48bb78;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.download-individual-btn:hover {
+    background: #38a169;
 }
