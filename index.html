@@ -24,9 +24,17 @@
             <div class="upload-area" id="uploadArea">
                 <div class="upload-content">
                     <div class="upload-icon">📄</div>
-                    <h3>Drop your password-protected PDF here</h3>
-                    <p>or click to select a file</p>
-                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                    <h3>Drop your password-protected PDFs here</h3>
+                    <p>or click to select file(s) - supports single or multiple PDFs</p>
+                    <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+                </div>
+            </div>
+
+            <div class="file-list-section display-none" id="fileListSection">
+                <h3>Selected Files</h3>
+                <div class="file-list" id="fileList"></div>
+                <div class="file-actions">
+                    <button id="clearFilesBtn" class="reset-btn">Clear All Files</button>
                 </div>
             </div>
 
@@ -44,6 +52,15 @@
                     <button id="removePasswordBtn">Remove Password</button>
                 </div>
                 <div class="error-message" id="errorMessage"></div>
+            </div>
+
+            <div class="batch-result-section display-none" id="batchResultSection">
+                <h3>✅ Files Processed Successfully!</h3>
+                <div class="processed-files" id="processedFilesList"></div>
+                <div class="batch-actions">
+                    <button id="downloadAllBtn" class="download-btn">Download All Files</button>
+                    <button id="resetBatchBtn" class="reset-btn">Process More Files</button>
+                </div>
             </div>
 
             <div class="result-section display-none" id="resultSection">
